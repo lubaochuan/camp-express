@@ -1,7 +1,7 @@
 # camp-express
 
 This project implements a web service backend for mobile apps for camp users.
-Admins can update camp information through a web interface and mobile apps {% pullquote %}
+Admins can update camp information through a web interface and mobile apps
 the information through the web service interface.
 
 We will use full-stack JavaScript development and more specifically Express for
