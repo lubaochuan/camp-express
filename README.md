@@ -1,8 +1,11 @@
 # camp-express
 
 This project implements a web service backend for mobile apps for camp users.
-Admins can update camp information through a web interface and mobile apps
-the information through the web service interface.
+Admins can update camp information through a web service interface and mobile
+apps pull the information through a similar web service interface. The goal is
+to allow non-technical users to easily update the content of the mobile app
+through a web interface. The mobile app is being developed as another open
+source project.
 
 We will use full-stack JavaScript development and more specifically Express for
 web server, MongoDB for database, and React for web client.
