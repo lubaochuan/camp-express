@@ -13,4 +13,4 @@ web server, MongoDB for database, and React for web client.
 
 ## Contribution
 Please contribute using pull requests. We will need to work out some guidelines
-in terms of style and workflow.
+regarding style and workflow.
