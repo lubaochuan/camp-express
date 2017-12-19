@@ -18,7 +18,7 @@ web server, MongoDB for database, and React for web client.
 Please contribute using pull requests. We will need to work out some guidelines
 regarding style and workflow.
 
-## Testing the app
+## Using the app
 After cloning the app, open a terminal to the root folder of the app and run `yarn install-client` to install dependencies for both the Express and React app.
 
 Next, run `yarn build-client` to generate a production build of the React app. This is necessary because Express serves the static files located in `/client/build`. 
