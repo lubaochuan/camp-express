@@ -10,13 +10,12 @@ class App extends Component {
   }
 
   getMessage = () => {
-
-    fetch('/api/test')
-      .then(res => res.json())
-      .then(message => {
-        console.log('message', message);
-        return this.setState(message);
-      });
+    // fetch('/api/test')
+    //   .then(res => res.json())
+    //   .then(message => {
+    //     console.log('message', message);
+    //     return this.setState(message);
+    //   });
   }
 
   render() {

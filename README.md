@@ -1,6 +1,7 @@
 # camp-express
 
 [![Build Status](https://travis-ci.org/cavatron/camp-express.svg?branch=master)](https://travis-ci.org/cavatron/camp-express)
+[![Coverage Status](https://coveralls.io/repos/github/cavatron/camp-express/badge.svg?branch=master)](https://coveralls.io/github/cavatron/camp-express?branch=master)
 
 This project implements a web service backend for mobile apps for camp users.
 Admins can update camp information through a web service interface and mobile
