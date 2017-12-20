@@ -9,6 +9,7 @@ dbconfig.json
 
 # testing
 /coverage
+/.nyc_output
 
 # production
 /build

@@ -7,7 +7,8 @@
     "start": "node server.js",
     "build-client": "cd client && yarn build && cd ..",
     "install-client": "yarn && cd client && yarn && cd ..",
-    "test": "mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "express": "^4.16.2",
@@ -16,6 +17,6 @@
   "devDependencies": {
     "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
-    "mocha-lcov-reporter": "^1.3.0"
+    "nyc": "^11.4.1"
   }
 }
