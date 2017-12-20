@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-// You need to create this file as it is not checked into git for security
-// See the README for how this file should be structured
+// This file contains sensitive information that is not checked into git
 const config = require('./dbconfig.json');
 
 const app = express();
