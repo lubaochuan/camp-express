@@ -8,7 +8,7 @@
     "build-client": "cd client && yarn build && cd ..",
     "install-client": "yarn && cd client && yarn && cd ..",
     "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
     "express": "^4.16.2",
