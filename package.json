@@ -2,21 +2,20 @@
   "name": "camp-express",
   "version": "0.0.0",
   "description": "Web application for dynamic camp information editing",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "build-client": "cd client && yarn build && cd ..",
     "install-client": "yarn && cd client && yarn && cd ..",
-    "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js"
+    "test": "nyc mocha"
   },
   "dependencies": {
     "express": "^4.16.2",
     "mongodb": "^3.0.0-rc0"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
-    "nyc": "^11.4.1"
+    "nyc": "^11.4.1",
+    "supertest": "^3.0.0"
   }
 }
