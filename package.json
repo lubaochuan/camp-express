@@ -7,13 +7,14 @@
     "start": "node index.js",
     "build-client": "cd client && yarn build && cd ..",
     "install-client": "yarn && cd client && yarn && cd ..",
-    "test": "nyc mocha"
+    "test": "nyc --reporter lcovonly mocha --exit | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
     "express": "^4.16.2",
     "mongodb": "^3.0.0-rc0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
     "nyc": "^11.4.1",
     "supertest": "^3.0.0"
