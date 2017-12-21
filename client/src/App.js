@@ -10,7 +10,6 @@ class App extends Component {
   }
 
   getMessage = () => {
-
     fetch('/api/test')
       .then(res => res.json())
       .then(message => {
