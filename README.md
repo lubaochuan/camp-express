@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/cavatron/camp-express.svg?branch=master)](https://travis-ci.org/cavatron/camp-express)
 [![Coverage Status](https://coveralls.io/repos/github/cavatron/camp-express/badge.svg)](https://coveralls.io/github/cavatron/camp-express)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 This project implements a web service backend for mobile apps for camp users.
 Admins can update camp information through a web service interface and mobile
