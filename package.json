@@ -1,10 +1,11 @@
 {
   "name": "camp-express",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Web application for dynamic camp information editing",
   "main": "index.js",
   "scripts": {
-    "commit": "git-cz",
+    "commit": "git add . && git-cz",
+    "release": "standard-version",
     "start": "node index.js",
     "build-client": "cd client && yarn build && cd ..",
     "install-client": "yarn && cd client && yarn && cd ..",
@@ -20,6 +21,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "mocha": "^4.0.1",
     "nyc": "^11.4.1",
+    "standard-version": "^4.2.0",
     "supertest": "^3.0.0"
   },
   "config": {
