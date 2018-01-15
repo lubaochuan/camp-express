@@ -33,12 +33,6 @@ server.get("/api/users", (req, res) => {
   });
 });
 
-// Any request made to the server that is not one of the above
-// API endpoints will be redirected to the React client
-server.get("*", (request, result) => {
-  result.sendFile(path.join(__dirname, "/client/build"));
-});
-
 const port = process.env.PORT || 5000;
 server.listen(port);
 
