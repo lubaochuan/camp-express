@@ -1,26 +1,33 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
-
-  state = { message: '' };
+  state = {
+    users: []
+  };
 
   componentDidMount() {
     this.getMessage();
   }
 
   getMessage = () => {
-    fetch('/api/test')
+    fetch("/api/users")
       .then(res => res.json())
-      .then(message => {
-        console.log('message', message);
-        return this.setState(message);
+      .then(users => {
+        console.log("users", users);
+        return this.setState({users});
       });
-  }
+  };
 
   render() {
+    console.log(this.state);
     return (
-      <p>Message: { this.state.message }</p>
+      <ul>{this.state.users.map((user, i) => (
+        <div key={i}>
+          <h2>User {i + 1}</h2>
+          <p>Name: {user.name}</p>
+        </div>
+      ))}</ul>
     );
   }
 }
