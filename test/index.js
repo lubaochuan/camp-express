@@ -2,10 +2,10 @@ var request = require('supertest');
 var expressServer = require('..');
 var assert = require('assert');
 
-describe('GET /api/test', function () {
+describe('GET /api/users', function () {
     it('responds with data', function (done) {
-        request(expressServer.server)
-            .get('/api/test')
-            .expect(200, expressServer.data, done);
+        request(expressServer)
+            .get('/api/users')
+            .expect(200, done);
     });
 });
