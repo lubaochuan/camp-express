@@ -1,9 +1,9 @@
-const express = require("express");
-const path = require("path");
-var mongoose = require("mongoose");
+const express = require('express');
+// const path = require('path');
+var mongoose = require('mongoose');
 const server = express();
 
-const config = require("./dbconfig.json");
+const config = require('./dbconfig.json');
 
 // Create a MongoDB connection
 mongoose.connect(`${config.connectionString}/${config.database}`, {
@@ -24,10 +24,10 @@ const userSchema = Schema({
 // Creates the model based off of the schema and gives it
 // a name. Note that the first argument must be the singular
 // version of the collection name
-const UserModel = mongoose.model("user", userSchema);
+const UserModel = mongoose.model('user', userSchema);
 
 // GET all the users
-server.get("/api/users", (req, res) => {
+server.get('/api/users', (req, res) => {
   UserModel.find({}, (err, users) => {
     res.send(users);
   });

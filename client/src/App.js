@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -11,23 +11,25 @@ class App extends Component {
   }
 
   getMessage = () => {
-    fetch("/api/users")
+    fetch('/api/users')
       .then(res => res.json())
       .then(users => {
-        console.log("users", users);
-        return this.setState({users});
+        console.log('users', users);
+        return this.setState({ users });
       });
   };
 
   render() {
     console.log(this.state);
     return (
-      <ul>{this.state.users.map((user, i) => (
-        <div key={i}>
-          <h2>User {i + 1}</h2>
-          <p>Name: {user.name}</p>
-        </div>
-      ))}</ul>
+      <ul>
+        {this.state.users.map((user, i) => (
+          <div key={i}>
+            <h2>User {i + 1}</h2>
+            <p>Name: {user.name}</p>
+          </div>
+        ))}
+      </ul>
     );
   }
 }

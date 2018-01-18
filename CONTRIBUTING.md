@@ -26,7 +26,7 @@ After running the above command, create a new branch off of master called releas
 
 Do not edit the release branch further. If you must make a hotfix for the release, make the change on master, then rebase the release branch to be based on the latest master. Details can be found in the project wiki page named Proposed Git Workflow.
 
-## Testing 
+## Testing
 
 Do not use `yarn test` directly. This command is run by Travis CI after a commit is made to master. The command output is not in a human-readable format and is read by Coveralls to display a badge of test coverage in the README. If you would like to run your tests before submitting a pull request (as you should), use `yarn test-local`.
 
