@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "nodemon",
+    "test": "nyc --reporter lcovonly mocha --exit && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage",
+    "test-local": "nyc --reporter text mocha --exit"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "nodemon": "^1.14.11",
+    "nyc": "^11.4.1",
+    "supertest": "^3.0.0"
+  }
+}

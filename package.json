@@ -2,19 +2,11 @@
   "name": "camp-express",
   "version": "0.1.0",
   "description": "Web application for dynamic camp information editing",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "commit": "git add . && git-cz",
     "release": "standard-version",
-    "tree": "git log --pretty=oneline --graph",
-    "start": "nodemon",
-    "test":
-      "nyc --reporter lcovonly mocha --exit && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage",
-    "test-local": "nyc --reporter text mocha --exit"
-  },
-  "dependencies": {
-    "express": "^4.16.2",
-    "mongoose": "^4.13.9"
+    "tree": "git log --pretty=oneline --graph"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
@@ -23,11 +15,7 @@
     "eslint": "^4.15.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-react": "^7.5.1",
-    "mocha": "^4.0.1",
-    "nodemon": "^1.14.11",
-    "nyc": "^11.4.1",
-    "standard-version": "^4.2.0",
-    "supertest": "^3.0.0"
+    "standard-version": "^4.2.0"
   },
   "config": {
     "commitizen": {

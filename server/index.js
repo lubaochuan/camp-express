@@ -1,9 +1,12 @@
 const express = require('express');
-// const path = require('path');
-var mongoose = require('mongoose');
+const cors = require('cors');
+const mongoose = require('mongoose');
 const server = express();
 
 const config = require('./dbconfig.json');
+
+// For now, allow all origins. THIS MUST CHANGE BEFORE DEPLOYMENT
+// server.use(cors);
 
 // Create a MongoDB connection
 mongoose.connect(`${config.connectionString}/${config.database}`, {
@@ -27,7 +30,7 @@ const userSchema = Schema({
 const UserModel = mongoose.model('user', userSchema);
 
 // GET all the users
-server.get('/api/users', (req, res) => {
+server.get('/api/users', cors(), (req, res) => {
   UserModel.find({}, (err, users) => {
     res.send(users);
   });

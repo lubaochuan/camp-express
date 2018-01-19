@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { apiUrl } from './environment/environment';
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { users: [] };
+    this.state = {
+      users: []
+    };
   }
 
   componentDidMount() {
@@ -12,23 +15,21 @@ class App extends Component {
   }
 
   getMessage() {
-    fetch('/api/users')
+    fetch(`${apiUrl}/users`)
       .then(res => res.json())
       .then(users => {
-        console.log('users', users);
         return this.setState({ users });
       });
   }
 
   render() {
-    console.log(this.state);
     return (
       <ul>
         {this.state.users.map((user, i) => (
-          <div key={i}>
+          <li key={i}>
             <h2>User {i + 1}</h2>
             <p>Name: {user.name}</p>
-          </div>
+          </li>
         ))}
       </ul>
     );
