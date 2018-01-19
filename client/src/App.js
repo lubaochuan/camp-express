@@ -2,22 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  state = {
-    users: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = { users: [] };
+  }
 
   componentDidMount() {
     this.getMessage();
   }
 
-  getMessage = () => {
+  getMessage() {
     fetch('/api/users')
       .then(res => res.json())
       .then(users => {
         console.log('users', users);
         return this.setState({ users });
       });
-  };
+  }
 
   render() {
     console.log(this.state);

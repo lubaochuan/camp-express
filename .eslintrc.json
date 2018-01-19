@@ -2,15 +2,17 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "prettier", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "jsx": true,
       "impliedStrict": true
-    }
+    },
+    "sourceType": "module"
   },
   "plugins": ["react"],
   "rules": {
@@ -22,7 +24,6 @@
     "no-unused-vars": "warn",
     "comma-dangle": ["warn", "never"],
     "no-cond-assign": ["warn", "always"],
-    "no-extra-parens": ["warn", "all"],
     "no-template-curly-in-string": "warn",
     "default-case": "warn",
     "no-alert": "warn",
@@ -35,8 +36,7 @@
     "array-bracket-spacing": "warn",
     "array-element-newline": "warn",
     "brace-style": ["warn", "1tbs"],
-    "camelcase": ["warn", "always"],
-    "capitalized-comments": ["warn", "always"],
+    "camelcase": "warn",
     "no-continue": "warn",
     "no-inline-comments": "warn",
     "no-multi-assign": "warn",
@@ -47,5 +47,13 @@
     "no-duplicate-imports": "warn",
     "prefer-const": "warn",
     "prefer-spread": "warn"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.2"
+    },
+    "propWrapperFunctions": ["forbidExtraProps"]
   }
 }

@@ -8,7 +8,8 @@
     "release": "standard-version",
     "tree": "git log --pretty=oneline --graph",
     "start": "nodemon",
-    "test": "nyc --reporter lcovonly mocha --exit && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage",
+    "test":
+      "nyc --reporter lcovonly mocha --exit && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage",
     "test-local": "nyc --reporter text mocha --exit"
   },
   "dependencies": {
