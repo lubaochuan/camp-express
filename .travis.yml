@@ -3,5 +3,7 @@ node_js:
  - "node"
 cache: yarn
 sudo: enabled
+before_install:
+ - chmod +x ./install-dependencies.sh
 install: ./install-dependencies.sh
 after_success: cd server && yarn coverage
