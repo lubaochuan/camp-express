@@ -6,7 +6,8 @@
   "scripts": {
     "commit": "git add . && git-cz",
     "release": "standard-version",
-    "tree": "git log --pretty=oneline --graph"
+    "tree": "git log --pretty=oneline --graph",
+    "install": "cd client && yarn && cd ../server && yarn && cd .."
   },
   "devDependencies": {
     "commitizen": "^2.9.6",

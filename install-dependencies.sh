@@ -5,10 +5,4 @@ apt update
 apt install -y mongodb-org
 service mongod start
 cat /var/log/mongodb/mongod.log
-
-cd client
-yarn
-cd ../server
-yarn
-cd ..
-yarn
+yarn install
