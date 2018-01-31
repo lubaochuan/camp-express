@@ -6,8 +6,8 @@
 /server/node_modules
 
 # testing
-/coverage
-/.nyc_output
+/server/coverage
+/server/.nyc_output
 
 # production
 /build

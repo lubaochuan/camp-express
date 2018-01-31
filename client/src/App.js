@@ -11,15 +11,16 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    this.getMessage();
+    this.getUsers();
   }
 
-  getMessage() {
+  getUsers() {
     fetch(`${apiUrl}/users`)
       .then(res => res.json())
       .then(users => {
         return this.setState({ users });
-      });
+      })
+      .catch(error => console.error(error));
   }
 
   render() {
