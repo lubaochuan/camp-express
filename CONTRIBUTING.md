@@ -1,22 +1,42 @@
 # Contribution Guide
 
-## Installation
+Fork the camp-express repository and contribute using pull requests. Even if you have push access to the repository, please create a pull request to allow for code review.
 
-Run `yarn install-client` to install dependencies for the Express and React app.
+## Setting up the development environment
 
-## Building the Client App
+### Installation
 
-Run `yarn build-client` to build the React code to be loaded by Express.
+* Install [Node 8](https://nodejs.org/en/) or above
 
-## Starting the app
+* Install [MongoDB 3.6](https://docs.mongodb.com/manual/administration/install-community/)
 
-You must build the client with `yarn build-client` in order for the Express server to load the client. This is because the server only loads built files from React and cannot serve an unbuilt React app.
+* Install [Yarn Package Manager](https://yarnpkg.com/en/docs/install) (recommended)
 
-After building the client, run `yarn start` to start the Express server. Then navigate to the specified port of localhost to view the React app.
+Then, run `npm install` or `yarn` in the root folder of the repository to install dependencies for the client, server, and dev tools.
+
+## Running the apps
+
+The client and server application are included in the same repository.
+
+### Express Server
+
+Run `npm run start` or `yarn start` inside of the server folder. The server is run at localhost:5000 by default
+
+### React Client
+
+Run `npm run start` or `yarn start` inside of the client folder. This will run a development web server at localhost:3000.
+
+### MongoDB
+
+In order to use MongoDB, you must have the `mongod` service running. See the MongoDB docs for more details. Normally, after MongoDB has been installed on your machine, this is as simple as running `mongod` in a terminal window.
+
+## Editors
+
+ESLint and Prettier are configured for this application. They are not yet built into the app's build tools. Please use the appropriate editor extension to use ESLint and Prettier.
 
 ## Commiting
 
-Use `yarn commit` to bring up the commitizen prompt. Do not use `git commit`. This app uses the conventional changelog specification for git commits. Details are found in the commitizen and conventional changelog documentation.
+This app uses [commitizen](https://github.com/commitizen/cz-cli) for standardizing commit messages. When making a commit, use `npm run commit` or `yarn commit` in the root of the project to stage any changes and bring up the commitizen prompt.
 
 ## Release
 
@@ -28,6 +48,12 @@ Do not edit the release branch further. If you must make a hotfix for the releas
 
 ## Testing
 
+### Express Server
+
 Do not use `yarn test` directly. This command is run by Travis CI after a commit is made to master. The command output is not in a human-readable format and is read by Coveralls to display a badge of test coverage in the README. If you would like to run your tests before submitting a pull request (as you should), use `yarn test-local`.
 
 If you want to keep testing your changes to tests, forward the `--watch` option to the test command by running `yarn test-local --watch`. This will cause the tests to run every time a change is made to a test file.
+
+### React Client
+
+Run `npm run test` or `yarn test` to have [Jest](https://facebook.github.io/jest/) watch the test files for changes.
