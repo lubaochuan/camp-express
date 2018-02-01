@@ -1,22 +1,27 @@
 {
   "name": "camp-express",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Web application for dynamic camp information editing",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "build-client": "cd client && yarn build && cd ..",
-    "install-client": "yarn && cd client && yarn && cd ..",
-    "test": "nyc --reporter lcovonly mocha --exit && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf coverage"
-  },
-  "dependencies": {
-    "express": "^4.16.2",
-    "mongodb": "^3.0.0-rc0"
+    "commit": "git add . && git-cz",
+    "release": "standard-version",
+    "tree": "git log --pretty=oneline --graph",
+    "install": "cd client && yarn && cd ../server && yarn && cd ..",
+    "test": "cd client && yarn test && cd ../server && yarn test && cd .."
   },
   "devDependencies": {
+    "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
-    "mocha": "^4.0.1",
-    "nyc": "^11.4.1",
-    "supertest": "^3.0.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.5.1",
+    "standard-version": "^4.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

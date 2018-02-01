@@ -1,15 +1,13 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# user secrets
-dbconfig.json
-
 # dependencies
 /node_modules
 /client/node_modules
+/server/node_modules
 
 # testing
-/coverage
-/.nyc_output
+/server/coverage
+/server/.nyc_output
 
 # production
 /build
@@ -25,3 +23,6 @@ dbconfig.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# editors
+.vscode

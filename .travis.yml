@@ -1,5 +1,10 @@
 language: node_js
 node_js:
- - "node"
+ - "8"
 cache: yarn
-after_success: yarn coverage
+sudo: enabled
+before_install:
+ - sudo chmod +x ./install-dependencies.sh
+install: sudo ./install-dependencies.sh
+script: yarn test
+after_success: cd server && yarn coverage
