@@ -5,6 +5,8 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
+# This project has moved and is being rewritten by the organization [sbu-acm](https://github.com/sbu-acm)
+
 This project implements a web service backend for mobile apps for camp users.
 Admins can update camp information through a web service interface and mobile
 apps pull the information through a similar web service interface. The goal is
